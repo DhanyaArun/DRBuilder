@@ -17,17 +17,13 @@ public class TestClass extends TestBase
 {
   LoginPage log;
   
-  
- // @AfterMethod
-  //public void afterMethod() 
-  //{
-	 // driver.quit();
- // }
-
-
 	@Test(description = "Testcase 1")
 	public void titleCheck()
 	{
+		
+		//Create a login page object
+		
+		
 		log=new LoginPage(driver);
 		String actualTitle=log.Login();	
 		System.out.println(actualTitle);
@@ -49,41 +45,42 @@ public class TestClass extends TestBase
 	log.setPassword(Password);
 	log.RememberClick();
 	log.LoginClick();
-	//log.LogoutClick();
-	//log.AboutUsClick();
+	//log.createResume();
 	//log.TemplateClick();
 	//log.MyProfile();
-	//log.createResume();
-	
-	//System.out.println(actualText);
-	//Assert.assertEquals(actualText,AutomationConstants.ExpectedText);
+	WebElement actualText=log.getLogin();
+	System.out.println(actualText);
+	Assert.assertEquals(actualText,AutomationConstants.ExpectedText);
 	
 	
 }
 	//Testing with valid username and password without ticking the Remember me checkbox
 
-	@Test(description = "Testcase 3")
+	/*@Test(description = "Testcase 3")
 	public void verifyUncheckRemember() throws IOException
 	{
 		log=new LoginPage(driver);
-		String Username1=ExcelUtility.getData(0, 0);
-		String Password1=ExcelUtility.getData(0,1);
+		String Username=ExcelUtility.getData(0, 0);
+		String Password=ExcelUtility.getData(0,1);
 		log.SignupClick();
-		log.setUsername(Username1);
-		log.setPassword(Password1);
+		log.setUsername(Username);
+		log.setPassword(Password);
 		log.LoginClick();	
-		//WebElement actualText=log.getLogoText();
+		log.createResume();
+		log.TemplateClick();
+		//WebElement actualText=log.getLogin();
 		//System.out.println(actualText);
 		//Assert.assertEquals(actualText,AutomationConstants.ExpectedText);
 		
-	}
+	}*/
 	
 	
 	//Testing with invalid username and valid password
-	
+	/*
 	@Test(description = "Testcase 4")
 	public void verifyInvalidUsername() throws IOException
 	{
+		
 		log=new LoginPage(driver);
 		log.SignupClick();
 		String Username1=ExcelUtility.getData(1,0);
@@ -164,5 +161,22 @@ public class TestClass extends TestBase
 		log.MyProfile();
 		String ActualProfile=log.getProfile();
 		Assert.assertEquals(ActualProfile,AutomationConstants.ExpectedProfile);
+	}*/
+	
+	@Test(description = "Testcase 9")
+	
+	public void CreateResumeButton() throws IOException
+	{
+		log=new LoginPage(driver);
+		String Username=ExcelUtility.getData(0, 0);
+		String Password=ExcelUtility.getData(0,1);
+		log.SignupClick();
+		log.setUsername(Username);
+		log.setPassword(Password);
+		log.RememberClick();
+		log.LoginClick();
+		log.createResume();
+		WebElement Actualbutton=log.getCreateButton();
+		Assert.assertEquals(Actualbutton,AutomationConstants.ExpectedButton);
 	}
 }

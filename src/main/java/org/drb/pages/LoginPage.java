@@ -20,6 +20,7 @@ WebDriver driver;
 	private WebElement template;
 	private WebElement profile;
 	private WebElement logout;
+	private WebElement createbutton;
 	
 	
 	public LoginPage(WebDriver driver)
@@ -31,6 +32,7 @@ WebDriver driver;
 	return(driver.getTitle());
 	
 	}
+	
 	
 	
 	//Sign Up
@@ -64,7 +66,15 @@ WebDriver driver;
 		login=driver.findElement(By.xpath("//button[@class='login100-form-btn']"));
 		login.click();
 	}
-	public String getLogoText()
+	
+	public WebElement getLogin()
+	{
+		return(driver.findElement(By.xpath("//a[text()='Logout']")));
+	}
+	
+	//Logout
+	
+	public void LogoutClick() 
 	{
           logoutclick = driver.findElement(By.xpath("//a[text()='Logout']"));
           logoutclick.click();
@@ -87,8 +97,9 @@ WebDriver driver;
 	
 	public void TemplateClick()
 	{
-		template=driver.findElement(By.xpath("//a[text()='Templates/Designs']"));
+		template=driver.findElement(By.xpath("//a[@routerlink='templatehome' and @class='nav-link' and @href='/templatehome']"));
 		template.click();
+		//System.out.println("Template");
 		
 	}
 	public String getTemplate()
@@ -102,7 +113,7 @@ WebDriver driver;
 	
 	public void MyProfile()
 	{
-		profile=driver.findElement(By.xpath("//a[@href=\"/profilehome\"]"));
+		profile=driver.findElement(By.xpath("//a[@routerlink='/profilehome' and @class='nav-link' and @href='/profilehome']"));
 		profile.click();
 	}
 	public String getProfile()
@@ -114,10 +125,15 @@ WebDriver driver;
 	
 	public void createResume()
 	{
-	createresume=driver.findElement(By.xpath("//a[text()='Create your resume now"));	
+	createresume=driver.findElement(By.xpath("//a[@routerlink='/templatehome' and @class='contact_bt']"));	
 	createresume.click();
 	}
 	
+	public WebElement getCreateButton()
+	{
+		createbutton=driver.findElement(By.xpath("//div[text()='Here you can choose your Template/Design']"));
+		return createbutton;
+	}
 	
 	
 		
