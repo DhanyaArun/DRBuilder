@@ -15,6 +15,12 @@ WebDriver driver;
 	private WebElement remclick;
 	private WebElement login;
 	private WebElement createresume;
+	private WebElement logoutclick;
+	private WebElement aboutus;
+	private WebElement template;
+	private WebElement profile;
+	private WebElement logout;
+	
 	
 	public LoginPage(WebDriver driver)
 	{
@@ -60,22 +66,61 @@ WebDriver driver;
 	}
 	public String getLogoText()
 	{
-		return(driver.getCurrentUrl());
+          logoutclick = driver.findElement(By.xpath("//a[text()='Logout']"));
+          logoutclick.click();
+}
+	
+	
+	//About us
+	
+	public void AboutUsClick() 
+	{
+		// TODO Auto-generated method stub
+		
+		aboutus=driver.findElement(By.xpath("//a[text()='Aboutus']"));
+		aboutus.click();
+	}
+		
+	
+	
+	//Templates/Design
+	
+	public void TemplateClick()
+	{
+		template=driver.findElement(By.xpath("//a[text()='Templates/Designs']"));
+		template.click();
+		
+	}
+	public String getTemplate()
+	
+	{
+	return(driver.getCurrentUrl());	
 	}
 	
-	//Logout
 	
-	/*public void Logout() 
+	//My Profile
+	
+	public void MyProfile()
 	{
-		logoutclick=driver.findElement(By.xpath("//a[@class='logout btn']");
-}*/
+		profile=driver.findElement(By.xpath("//a[@href=\"/profilehome\"]"));
+		profile.click();
+	}
+	public String getProfile()
+	{
+		return(driver.getCurrentUrl());
+	}
 
-//Create resume
+     //Create resume
 	
 	public void createResume()
 	{
-	createresume=driver.findElement(By.xpath("/html/body/app-root/app-home/div/div[1]/div/div/div/div/div/div/div/a"));	
+	createresume=driver.findElement(By.xpath("//a[text()='Create your resume now"));	
 	createresume.click();
 	}
+	
+	
+	
+		
+	}
 
-}
+
