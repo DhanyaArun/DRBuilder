@@ -48,12 +48,14 @@ WebDriver driver;
 	{
 		username=driver.findElement(By.name("Username"));
 		username.sendKeys(setUser);
+		username.clear();
 	}
 	
 	public void setPassword(String passwordstr) 
 	{
 		password=driver.findElement(By.name("pass"));
 		password.sendKeys(passwordstr);
+		password.clear();
 }
 	
 	public void RememberClick()

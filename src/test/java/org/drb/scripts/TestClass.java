@@ -17,14 +17,15 @@ public class TestClass extends TestBase
 {
   LoginPage log;
   
+
+  
+//Checking the Title
+  
 	@Test(description = "Testcase 1")
 	
 	public void titleCheck()
 	{
-		
-		//Create a login page object
-		
-		
+			
 		log=new LoginPage(driver);
 		String actualTitle=log.Login();	
 		System.out.println(actualTitle);
@@ -65,9 +66,6 @@ public class TestClass extends TestBase
 		log.setUsername(Username);
 		log.setPassword(Password);
 		log.LoginClick();	
-		Thread.sleep(1000);
-		//log.createResume();
-		//log.TemplateClick();
 		String actualUrl=log.invalidCheck();
 		System.out.println(actualUrl);
 		Assert.assertEquals(actualUrl,AutomationConstants.expectedUrl);
