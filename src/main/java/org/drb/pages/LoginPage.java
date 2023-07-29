@@ -14,6 +14,7 @@ WebDriver driver;
 	private WebElement password;
 	private WebElement remclick;
 	private WebElement login;
+	private WebElement logintext;
 	private WebElement createresume;
 	private WebElement logoutclick;
 	private WebElement aboutus;
@@ -69,7 +70,14 @@ WebDriver driver;
 	
 	public WebElement getLogin()
 	{
-		return(driver.findElement(By.xpath("//a[text()='Logout']")));
+		return(driver.findElement(By.xpath("//h3[@class=\"theme_highlight\"]")));
+			
+	}
+	
+	
+	public String invalidCheck() 
+	{
+		return(driver.getCurrentUrl());
 	}
 	
 	//Logout
@@ -79,6 +87,12 @@ WebDriver driver;
           logoutclick = driver.findElement(By.xpath("//a[text()='Logout']"));
           logoutclick.click();
 }
+	
+	public String getLogout()
+	{
+		return(driver.getCurrentUrl());
+	}
+	
 	
 	
 	//About us
@@ -91,7 +105,10 @@ WebDriver driver;
 		aboutus.click();
 	}
 		
-	
+	public String CheckAbout() 
+	{
+		return(driver.getCurrentUrl());
+	}
 	
 	//Templates/Design
 	
