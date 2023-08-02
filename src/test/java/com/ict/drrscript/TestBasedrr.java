@@ -14,10 +14,10 @@ public class TestBasedrr {
 		 driver.manage().window().maximize();
 	
 	 }
-	/* @AfterTest
+	 @AfterTest
 		public void afterTest()
 		{
 			driver.quit();
 		}
-	*/
+	
 }

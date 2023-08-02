@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.drb.scripts.TestClass">
+      <class name="com.ict.drrscript.TestClassdrr">
         <methods>
+          <include name="verifyInvalidSignup"/>
+          <include name="verifyValidSignup"/>
           <include name="setUp"/>
-          <include name="verifyValidLogin"/>
+          <include name="afterTest"/>
+          <include name="verifySignupLogin"/>
         </methods>
-      </class> <!-- org.drb.scripts.TestClass -->
+      </class> <!-- com.ict.drrscript.TestClassdrr -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

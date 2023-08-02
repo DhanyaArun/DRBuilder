@@ -43,12 +43,16 @@ public class TestClass extends TestBase
 	String Username=ExcelUtility.getData(0, 0);
 	String Password=ExcelUtility.getData(0, 1);
 	log.SignupClick();
+	Thread.sleep(500);
 	log.setUsername(Username);
+	Thread.sleep(500);
 	log.setPassword(Password);
+	Thread.sleep(500);
 	log.RememberClick();
-	log.LoginClick();
+	Thread.sleep(500);
+	log.LoginClick();	
 	Thread.sleep(1000);
-	WebElement actualText=log.getLogin();
+	String actualText=log.getLogin();
 	System.out.println(actualText);
 	Assert.assertEquals(actualText,AutomationConstants.ExpectedText);
 	
@@ -63,9 +67,13 @@ public class TestClass extends TestBase
 		String Username=ExcelUtility.getData(0, 0);
 		String Password=ExcelUtility.getData(0,1);
 		log.SignupClick();
+		Thread.sleep(500);
 		log.setUsername(Username);
+		Thread.sleep(500);
 		log.setPassword(Password);
-		log.LoginClick();	
+		Thread.sleep(500);
+		log.LoginClick();
+		Thread.sleep(500);
 		String actualUrl=log.invalidCheck();
 		System.out.println(actualUrl);
 		Assert.assertEquals(actualUrl,AutomationConstants.expectedUrl);
@@ -75,18 +83,23 @@ public class TestClass extends TestBase
 	//Testing with invalid username and valid password
 	
 	@Test(description = "Testcase 4")
-	public void verifyInvalidUsername() throws IOException
+	public void verifyInvalidUsername() throws IOException, InterruptedException
 	{
 		
 		log=new LoginPage(driver);
 		log.SignupClick();
+		Thread.sleep(500);
 		String Username1=ExcelUtility.getData(1,0);
 		String Password1=ExcelUtility.getData(1,1);
 	
 		log.setUsername(Username1);
+		Thread.sleep(500);
 		log.setPassword(Password1);
+		Thread.sleep(500);
 		log.RememberClick();
-		log.LoginClick();	
+		Thread.sleep(500);
+		log.LoginClick();
+		Thread.sleep(500);
 		String actualUrl=log.invalidCheck();
 		System.out.println(actualUrl);
 		Assert.assertEquals(actualUrl,AutomationConstants.expectedUrl);
@@ -98,17 +111,22 @@ public class TestClass extends TestBase
 		 
 	 @Test(description = "Testcase 5")
 	 
-	public void verifyInvalid() throws IOException
+	public void verifyInvalid() throws IOException, InterruptedException
 	
 	{
 		log=new LoginPage(driver);
 		String Username=ExcelUtility.getData(2, 0);
 		String Password=ExcelUtility.getData(2, 2);
 		log.SignupClick();
+		Thread.sleep(500);
 		log.setUsername(Username);
+		Thread.sleep(500);
 		log.setPassword(Password);
+		Thread.sleep(500);
 		log.RememberClick();
+		Thread.sleep(500);
 		log.LoginClick();
+		Thread.sleep(500);
 		String actualUrl=log.invalidCheck();
 		System.out.println(actualUrl);
 		Assert.assertEquals(actualUrl,AutomationConstants.expectedUrl);
@@ -118,17 +136,23 @@ public class TestClass extends TestBase
 	 
 	 @Test(description = "Testcase 6")
 	 
-	 public void AboutUs() throws IOException
+	 public void AboutUs() throws IOException, InterruptedException
 	 {
 		 log=new LoginPage(driver);
 			String Username=ExcelUtility.getData(0, 0);
 			String Password=ExcelUtility.getData(0,1);
 			log.SignupClick();
+			Thread.sleep(500);
 			log.setUsername(Username);
+			Thread.sleep(500);
 			log.setPassword(Password);
+			Thread.sleep(500);
 			log.RememberClick();
+			Thread.sleep(500);
 			log.LoginClick();
+			Thread.sleep(500);
 			log.AboutUsClick();
+			Thread.sleep(500);
 			//String actualurl=log.CheckAbout();
 			//Assert.assertEquals(actualurl,AutomationConstants.expectedurl);
 	 }
@@ -137,17 +161,23 @@ public class TestClass extends TestBase
 	 
 	@Test(description = "Testcase 7")
 	
-	public void Templates() throws IOException
+	public void Templates() throws IOException, InterruptedException
 	{
 		log=new LoginPage(driver);
 		String Username=ExcelUtility.getData(0, 0);
 		String Password=ExcelUtility.getData(0,1);
 		log.SignupClick();
+		Thread.sleep(500);
 		log.setUsername(Username);
+		Thread.sleep(500);
 		log.setPassword(Password);
+		Thread.sleep(500);
 		log.RememberClick();
+		Thread.sleep(500);
 		log.LoginClick();
+		Thread.sleep(1000);
 		log.TemplateClick();
+		Thread.sleep(500);
 		String Actualtemplate=log.getTemplate();
 		Assert.assertEquals(Actualtemplate,AutomationConstants.ExpectedTemplate);
 	}
@@ -156,17 +186,23 @@ public class TestClass extends TestBase
 	
 	@Test(description = "Testcase 8")
 	
-	public void MyProfilePage() throws IOException
+	public void MyProfilePage() throws IOException, InterruptedException
 	{
 		log=new LoginPage(driver);
 		String Username=ExcelUtility.getData(0, 0);
 		String Password=ExcelUtility.getData(0,1);
 		log.SignupClick();
+		Thread.sleep(500);
 		log.setUsername(Username);
+		Thread.sleep(500);
 		log.setPassword(Password);
+		Thread.sleep(500);
 		log.RememberClick();
+		Thread.sleep(500);
 		log.LoginClick();
+		Thread.sleep(500);
 		log.MyProfile();
+		Thread.sleep(500);
 		String ActualProfile=log.getProfile();
 		Assert.assertEquals(ActualProfile,AutomationConstants.ExpectedProfile);
 	}
@@ -176,17 +212,23 @@ public class TestClass extends TestBase
 	
 	@Test(description = "Testcase 9")
 	
-	public void CreateResumeButton() throws IOException
+	public void CreateResumeButton() throws IOException, InterruptedException
 	{
 		log=new LoginPage(driver);
 		String Username=ExcelUtility.getData(0, 0);
 		String Password=ExcelUtility.getData(0,1);
 		log.SignupClick();
+		Thread.sleep(500);
 		log.setUsername(Username);
+		Thread.sleep(500);
 		log.setPassword(Password);
+		Thread.sleep(500);
 		log.RememberClick();
+		Thread.sleep(500);
 		log.LoginClick();
+		Thread.sleep(500);
 		log.createResume();
+		Thread.sleep(500);
 		WebElement Actualbutton=log.getCreateButton();
 		Assert.assertEquals(Actualbutton,AutomationConstants.ExpectedButton);
 	}
@@ -196,17 +238,23 @@ public class TestClass extends TestBase
 	
 	@Test(description = "Testcase 10")
 	
-	public void LogoutCheck() throws IOException
+	public void LogoutCheck() throws IOException, InterruptedException
 	{
 		log=new LoginPage(driver);
 		String Username=ExcelUtility.getData(0, 0);
 		String Password=ExcelUtility.getData(0,1);
 		log.SignupClick();
+		Thread.sleep(500);
 		log.setUsername(Username);
+		Thread.sleep(500);
 		log.setPassword(Password);
+		Thread.sleep(500);
 		log.RememberClick();
+		Thread.sleep(500);
 		log.LoginClick();
+		Thread.sleep(500);
 		log.LogoutClick();
+		Thread.sleep(500);
 		String Actualurl=log.getLogout();
 		Assert.assertEquals(Actualurl,AutomationConstants.Expectedurl);
 	}

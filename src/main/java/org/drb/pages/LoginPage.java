@@ -49,6 +49,7 @@ WebDriver driver;
 		username=driver.findElement(By.name("Username"));
 		username.sendKeys(setUser);
 		username.clear();
+
 	}
 	
 	public void setPassword(String passwordstr) 
@@ -56,6 +57,7 @@ WebDriver driver;
 		password=driver.findElement(By.name("pass"));
 		password.sendKeys(passwordstr);
 		password.clear();
+	
 }
 	
 	public void RememberClick()
@@ -70,9 +72,9 @@ WebDriver driver;
 		login.click();
 	}
 	
-	public WebElement getLogin()
+	public String getLogin()
 	{
-		return(driver.findElement(By.xpath("//h3[@class=\"theme_highlight\"]")));
+		return(driver.getCurrentUrl());
 			
 	}
 	
@@ -144,7 +146,7 @@ WebDriver driver;
 	
 	public void createResume()
 	{
-	createresume=driver.findElement(By.xpath("//a[@routerlink='/templatehome' and @class='contact_bt']"));	
+	createresume=driver.findElement(By.xpath("//a[@class=\\\"contact_bt\\\" and @href=\\\"/templatehome\\]"));	
 	createresume.click();
 	}
 	
