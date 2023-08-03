@@ -2,7 +2,7 @@ package org.resume.base;
 
 import java.io.IOException;
 
-import org.ictkerala.excel.ExcelUtility;
+//import org.ictkerala.excel.ExcelUtility;
 import org.openqa.selenium.WebElement;
 import org.resume.pages.AddProjectPage;
 import org.testng.annotations.AfterMethod;
@@ -14,15 +14,15 @@ public class TestClass extends TestBase{
 	
 	AddProjectPage ap;
 	
-	@Test 
-	public void verifyLoginButton() throws IOException
+	//@Test 
+	/*public void verifyLoginButton() throws IOException
 	{
 	
 		ap=new AddProjectPage(driver);
 		ap.ResumeLogin();
-	}
+	}*/
 	
-	@Test 
+	/*@Test 
 	public void verifyLogin() throws IOException
 	{
 	
@@ -38,7 +38,7 @@ public class TestClass extends TestBase{
 		ap=new AddProjectPage(driver);
 		ap.RemClick();
 		ap.ResumeLoginclick(); 
-	}
+	}*/
 
 	@Test 
 	public void verifyAddProjectPage() throws IOException

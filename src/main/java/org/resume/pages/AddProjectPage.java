@@ -56,7 +56,7 @@ return(driver.getTitle());
 
 }
 
-public void ResumeLogin() 
+/*public void ResumeLogin() 
 {
 	sgclick=driver.findElement(By.xpath("//a[@href='/login']"));
 	sgclick.click();
@@ -94,7 +94,7 @@ public WebElement getLogin()
 {
 	return(driver.findElement(By.xpath("//h3[@class=\"theme_highlight\"]")));
 		
-}
+}*/
 
 public void AddProjectClick()
 
