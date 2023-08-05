@@ -1,12 +1,6 @@
 package org.resume.base;
 
 import java.io.IOException;
-
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.interactions.Actions;
-//import org.ictkerala.excel.ExcelUtility;
-//import org.openqa.selenium.WebElement;
 import org.resume.pages.AddProjectPage;
 //import org.testng.annotations.AfterMethod;
 //import org.testng.annotations.BeforeTest;
@@ -17,6 +11,7 @@ public class TestClass extends TestBase{
 	
 	AddProjectPage ap;
 	
+
 	@Test 
 	public void verifyAddProjectPage() throws IOException
 	{

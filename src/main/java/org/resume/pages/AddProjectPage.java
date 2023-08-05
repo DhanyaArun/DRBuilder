@@ -65,7 +65,6 @@ return(driver.getTitle());
 
 }
 
-
 public void AddProjectClick()
 
 {

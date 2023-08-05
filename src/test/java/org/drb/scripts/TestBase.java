@@ -23,10 +23,12 @@ public class TestBase
 		Thread.sleep(1000);
 	}
 	
-	/*@AfterTest
-	public void afterTest()
+	@AfterTest
+	public void afterTest() throws InterruptedException
 	{
+		
+		Thread.sleep(5000);
 	driver.quit();
-	}*/
+	}
 }
 
