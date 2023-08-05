@@ -2,11 +2,14 @@ package org.resume.base;
 
 import java.io.IOException;
 
-import org.ictkerala.excel.ExcelUtility;
-import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.interactions.Actions;
+//import org.ictkerala.excel.ExcelUtility;
+//import org.openqa.selenium.WebElement;
 import org.resume.pages.AddProjectPage;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
+//import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
@@ -14,32 +17,6 @@ public class TestClass extends TestBase{
 	
 	AddProjectPage ap;
 	
-	@Test 
-	public void verifyLoginButton() throws IOException
-	{
-	
-		ap=new AddProjectPage(driver);
-		ap.ResumeLogin();
-	}
-	
-	@Test 
-	public void verifyLogin() throws IOException
-	{
-	
-		ap=new AddProjectPage(driver);
-		//String user=ExcelUtility.getData(0, 0);
-		//String pswd=ExcelUtility.getData(0, 1);
-		ap.ResumeLogin1("JITHIN");
-		ap.ResumeLogin2("Jithin@123");
-		
-	}
-	public void verifyLoginClick() throws IOException
-	{
-		ap=new AddProjectPage(driver);
-		ap.RemClick();
-		ap.ResumeLoginclick(); 
-	}
-
 	@Test 
 	public void verifyAddProjectPage() throws IOException
 	{
@@ -206,6 +183,29 @@ public class TestClass extends TestBase{
 		ap=new AddProjectPage(driver);
 		ap.AddDescribeYour("describe");
 	}
+	@Test 
+	public void verifyImageSelection() throws IOException
+	{
 	
+		ap=new AddProjectPage(driver);
+		ap.SetChoosefile();
+	}
+
+	@Test
+	public void Setcheckbox() throws InterruptedException
+	{
+		
+		ap=new AddProjectPage(driver);
+		ap.Setcheckbox();
+		
+	}
+	
+	@Test
+	public void verifyCreateResume() throws IOException
+	{
+	
+		ap=new AddProjectPage(driver);
+		ap.CreateResume();
+	}
 	
 }

@@ -1,6 +1,7 @@
 package org.resume.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -9,17 +10,18 @@ public class AddProjectPage {
 	
 	WebDriver driver;	
 	
+	//private WebElement prnowclick;
 	private WebElement addprj;
-	private WebElement user;
-	private WebElement pswd;
-	private WebElement chbclick;
-	private WebElement sgclick;
-	private WebElement logclick;
+	public WebElement user;
+	public WebElement pswd;
+	public WebElement chbclick;
+	//private WebElement sgclick;
+	//private WebElement logclick;
 	private WebElement title;
 	private WebElement desc;
 	private WebElement addqli;
 	private WebElement addcrs;
-	private WebElement sletcrs;
+	//private WebElement sletcrs;
 	private WebElement addcourse;
 	private WebElement addpersentage;
 	private WebElement jobexp;
@@ -37,8 +39,15 @@ public class AddProjectPage {
 	private WebElement achievment;
 	private WebElement des;
 	private WebElement desyr;
-	
-	
+	//private WebElement signupclick;
+	//private WebElement username;
+	//private WebElement password;
+	//private WebElement remclick;
+	//private WebElement login;
+	//private WebElement createre;
+	private WebElement choosefile;
+	private WebElement chekbox;
+	public WebElement createresume; 
 	
 public  AddProjectPage(WebDriver driver)
 	
@@ -56,45 +65,6 @@ return(driver.getTitle());
 
 }
 
-public void ResumeLogin() 
-{
-	sgclick=driver.findElement(By.xpath("//a[@href='/login']"));
-	sgclick.click();
-	
-}
-
-public void ResumeLogin1(String setUser) 
-{
-	user=driver.findElement(By.xpath("//input[@name='Username']"));
-	user.sendKeys(setUser);
-	user.clear();
-}
-public void ResumeLogin2(String setPass)
-{
-	pswd=driver.findElement(By.xpath("//input[@name='pass']"));
-	pswd.sendKeys(setPass);
-	pswd.clear();
-}
-
-public void RemClick() 
-{
-	chbclick=driver.findElement(By.xpath("//label[@class='label-checkbox100']"));
-	chbclick.click();
-}
-
-
-public void ResumeLoginclick() 
-{
-	
-	logclick=driver.findElement(By.xpath("//button[@class='login100-form-btn']"));
-	logclick.click();
-}
-
-public WebElement getLogin()
-{
-	return(driver.findElement(By.xpath("//h3[@class=\"theme_highlight\"]")));
-		
-}
 
 public void AddProjectClick()
 
@@ -271,11 +241,29 @@ public void AddDescribeYour(String setValue)
 	desyr.sendKeys(setValue);
 }
 
+public void SetChoosefile()
+ {
+  choosefile=driver.findElement(By.xpath("//input[@name='image']"));
+  //choosefile.click();
+  choosefile.sendKeys("C:\\Users\\342257\\Pictures\\index.jpg");
+  
+ }
+
+public void Setcheckbox() 
+    {
+  chekbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
+  chekbox.sendKeys("click");
+    }
+
+ public void CreateResume() 
+ {
+createresume = driver.findElement(By.xpath("/html/body/app-root/app-sampleform/div/form"));
+createresume.submit();
+ }
+
+
+    }
 
 
 
 
-
-
-
-}
