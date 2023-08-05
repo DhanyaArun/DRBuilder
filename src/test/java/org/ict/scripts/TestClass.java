@@ -10,20 +10,24 @@ import org.testng.annotations.Test;
 public class TestClass extends TestBase{
 	CreateResumePage cr;
 	
-	@Test 
-	public void verifyCreateResumePage() throws IOException
+	@Test (priority = 1)
+	public void verifyCreateResumePage() throws IOException, InterruptedException
 	{
 	
 	   	cr=new CreateResumePage(driver);
 		String fullname= ExcelUtility.getData(0, 0);
 		cr.setFullname(fullname);
+		Thread.sleep(500);
 		 long dob= ExcelUtility.getNumericData(0, 1);
 			cr.setDOB(dob);
 		cr.GenderClick();
+		Thread.sleep(500);
 		String email= ExcelUtility.getData(0, 2);
 		cr.setMail(email);
+		Thread.sleep(500);
 		 long mob= ExcelUtility.getNumericData(0, 3);
 		cr.setMobile(mob);
+		Thread.sleep(500);
 		 cr.setBoard();
 		 long pr= ExcelUtility.getNumericData(0, 4);
 		 cr.setPercent(pr);

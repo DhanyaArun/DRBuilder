@@ -12,10 +12,12 @@ public class Edit {
 	{
 		this.driver=driver;
 	}
-	public void editprofile_click()
+	
+	public void editprofile_click() throws InterruptedException
 	{
 		element=driver.findElement(By.xpath("//a[@routerlink='editform']"));
 		element.click();
+		Thread.sleep(1000);
 
 		
 	}

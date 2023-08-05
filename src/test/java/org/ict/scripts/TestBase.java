@@ -9,18 +9,19 @@ public class TestBase {
 
 	WebDriver driver;
 	@BeforeTest
-	public void setUP()
+	public void setUP() throws InterruptedException
 	{
 		driver=new ChromeDriver();
 		driver.get("http://167.71.226.96/sampleform");
 		driver.manage().window().maximize();
+		Thread.sleep(1000);
 			
 	}
 	
 @AfterTest
 public void TearDown()
 {
-	driver.close();
+	driver.quit();
 }
 
 }

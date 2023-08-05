@@ -17,14 +17,15 @@ public class testclass extends testbase
 	
 	
 	@Test 
-		public void verifyCreateResumePage() throws IOException
+		public void verifyCreateResumePage() throws IOException, InterruptedException
 		{
 		    ed=new Edit(driver);
 		    ed.editprofile_click();
+		    
 		    er=new Edit_Resumepage(driver);
 		   
-		    
-		    er.setFullname("heera");
+		   
+		    er.setFullname();
 		    er.setDOB();
 		    er.GenderClick();
 		    er.setMail("arunnakulan2017@gmail.com");

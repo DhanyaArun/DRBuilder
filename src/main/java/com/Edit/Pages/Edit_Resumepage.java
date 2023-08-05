@@ -72,7 +72,7 @@ public class Edit_Resumepage {
 		{
 			this.driver=driver;
 	 }
-	public void setFullname(String setUser)
+	public void setFullname()
 	
 	{
 	fullname=driver.findElement(By.xpath("//input[@id='name']"));
@@ -82,7 +82,7 @@ public class Edit_Resumepage {
 	
 	{
 	dob=driver.findElement(By.xpath("//input[@id='date']"));
-	dob.sendKeys("13111999");
+	dob.sendKeys("13-11-1999");
 	}
 	public void GenderClick()
 	
@@ -427,4 +427,5 @@ public class Edit_Resumepage {
 		update.click();
 		
 	}
+	
 }

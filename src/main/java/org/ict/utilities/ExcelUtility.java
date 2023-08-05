@@ -14,7 +14,7 @@ public class ExcelUtility {
 	public static String getData(int rowNum,int colNum) throws IOException
 	{
 		
-	FileInputStream inp=new FileInputStream("D:\\works java\\DRBResumeCreation\\src\\main\\resources\\TestDataa.xlsx");
+	FileInputStream inp=new FileInputStream("C:\\Users\\Arun\\eclipse-workspace\\MainProject1\\DRBuilder\\src\\main\\resources\\TestDataa.xlsx");
 	
 	excelWbook=new XSSFWorkbook(inp);
 	excelsheet=excelWbook.getSheetAt(0);
@@ -25,7 +25,7 @@ public class ExcelUtility {
 
 	public static long getNumericData(int rowNum,int colNum) throws IOException {
 		
-		 FileInputStream  inp=new FileInputStream("D:\\\\works java\\\\DRBResumeCreation\\\\src\\\\main\\\\resources\\\\TestDataa.xlsx");
+		 FileInputStream  inp=new FileInputStream("C:\\Users\\Arun\\eclipse-workspace\\MainProject1\\DRBuilder\\src\\main\\resources\\TestDataa.xlsx");
 		    excelWbook=new XSSFWorkbook(inp);
 		    excelsheet=excelWbook.getSheetAt(0);
 		    return (long)excelsheet.getRow(rowNum).getCell(colNum).getNumericCellValue();

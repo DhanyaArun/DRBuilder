@@ -37,6 +37,9 @@ public class AddProjectPage {
 	private WebElement achievment;
 	private WebElement des;
 	private WebElement desyr;
+	private WebElement choosefile;
+	private WebElement chekbox;
+	public WebElement createresume;
 	
 	
 	
@@ -271,6 +274,25 @@ public void AddDescribeYour(String setValue)
 	desyr.sendKeys(setValue);
 }
 
+public void SetChoosefile()
+{
+ choosefile=driver.findElement(By.xpath("//input[@name='image']"));
+ //choosefile.click();
+ choosefile.sendKeys("C:\\Users\\342257\\Pictures\\index.jpg");
+ 
+}
+
+public void Setcheckbox() 
+   {
+ chekbox = driver.findElement(By.xpath("//input[@type='checkbox']"));
+ chekbox.sendKeys("click");
+   }
+
+public void CreateResume() 
+{
+createresume = driver.findElement(By.xpath("/html/body/app-root/app-sampleform/div/form"));
+createresume.submit();
+}
 
 
 

@@ -31,7 +31,7 @@ public class TestClassdrr extends TestBasedrr{
 		reg.setCpass(CPasswrd);
 				
 		reg.Registerclick();
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		driver.navigate().refresh();
 		
 	}
@@ -52,7 +52,7 @@ public class TestClassdrr extends TestBasedrr{
 		reg.setCpass(CPasswrd);
 				
 		reg.Registerclick();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.navigate().refresh();
 		
 	}
@@ -95,7 +95,7 @@ public class TestClassdrr extends TestBasedrr{
 		Thread.sleep(2000);
 		
 	}
-@AfterTest
+@Test
 	
 	public void verifySignupLogin() throws IOException, Throwable  {
 

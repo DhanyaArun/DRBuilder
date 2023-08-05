@@ -207,5 +207,28 @@ public class TestClass extends TestBase{
 		ap.AddDescribeYour("describe");
 	}
 	
+	@Test 
+	public void verifyImageSelection() throws IOException
+	{
 	
+		ap=new AddProjectPage(driver);
+		ap.SetChoosefile();
+	}
+
+	@Test
+	public void Setcheckbox() throws InterruptedException
+	{
+		
+		ap=new AddProjectPage(driver);
+		ap.Setcheckbox();
+		
+	}
+	
+	@Test
+	public void verifyCreateResume() throws IOException
+	{
+	
+		ap=new AddProjectPage(driver);
+		ap.CreateResume();
+	}
 }

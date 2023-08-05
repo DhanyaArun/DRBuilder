@@ -13,7 +13,7 @@ public class TestBase {
 	public void setUP()
 	{
 		driver=new ChromeDriver();
-		driver.get("http://167.71.226.96");
+		driver.get("http://167.71.226.96/sampleform");
 		driver.manage().window().maximize();
 		
 		

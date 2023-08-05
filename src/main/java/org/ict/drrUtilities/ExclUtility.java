@@ -13,14 +13,14 @@ public static XSSFSheet excelSheet,celltype;
 
  public static String getData(int rowNum,int colNum) throws IOException {
 	
-	 FileInputStream  inp=new FileInputStream("C:\\my_java\\swtesting\\drr\\src\\main\\resources\\register.xlsx");
+	 FileInputStream  inp=new FileInputStream("C:\\Users\\Arun\\eclipse-workspace\\MainProject1\\DRBuilder\\src\\main\\resources\\register.xlsx");
 	    excelWbook=new XSSFWorkbook(inp);
 	    excelSheet=excelWbook.getSheetAt(0);
 	    return excelSheet.getRow(rowNum).getCell(colNum).getStringCellValue();
  }
  public static long getNumericData(int rowNum,int colNum) throws IOException {
 		
-	 FileInputStream  inp=new FileInputStream("C:\\my_java\\swtesting\\drr\\src\\main\\resources\\register.xlsx");
+	 FileInputStream  inp=new FileInputStream("C:\\Users\\Arun\\eclipse-workspace\\MainProject1\\DRBuilder\\src\\main\\resources\\register.xlsx");
 	    excelWbook=new XSSFWorkbook(inp);
 	    excelSheet=excelWbook.getSheetAt(0);
 	    return (long)excelSheet.getRow(rowNum).getCell(colNum).getNumericCellValue();
