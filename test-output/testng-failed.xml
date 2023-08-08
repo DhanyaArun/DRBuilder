@@ -3,6 +3,50 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="org.drb.scripts.TestClass">
+        <methods>
+          <include name="CreateResumeButton"/>
+          <include name="setUp"/>
+          <include name="Templates"/>
+          <include name="verifyValidLogin"/>
+          <include name="afterTest"/>
+          <include name="verifyUncheckRemember"/>
+          <include name="verifyInvalid"/>
+        </methods>
+      </class> <!-- org.drb.scripts.TestClass -->
+      <class name="org.mns.scripts.testclass">
+        <methods>
+          <include name="verifyCreateResumePage"/>
+          <include name="setUP"/>
+        </methods>
+      </class> <!-- org.mns.scripts.testclass -->
+      <class name="org.resume.base.TestClass">
+        <methods>
+          <include name="verifySelectCoursePage"/>
+          <include name="verifyImageSelection"/>
+          <include name="verifyDescribeClick"/>
+          <include name="verifyAddProjectDesc"/>
+          <include name="verifyYourSkilClick"/>
+          <include name="verifyCourseName"/>
+          <include name="verifySkill"/>
+          <include name="verifyAddProjectTitle"/>
+          <include name="verifyAchieveClick"/>
+          <include name="verifyAddCoursePage"/>
+          <include name="setUP"/>
+          <include name="verifyFromYear"/>
+          <include name="verifyPrgLanguageClick"/>
+          <include name="verifyDescribeYour"/>
+          <include name="verifyJobExpClick"/>
+          <include name="verifyLanguageClick"/>
+          <include name="verifyToYear"/>
+          <include name="verifyJobTitle"/>
+          <include name="verifyAchievement"/>
+          <include name="verifyPrgLanguage"/>
+          <include name="verifyPersentage"/>
+          <include name="verifyPrgLangPersent"/>
+          <include name="verifyLanguageKnown"/>
+        </methods>
+      </class> <!-- org.resume.base.TestClass -->
       <class name="com.ict.drrscript.TestClassdrr">
         <methods>
           <include name="verifyEmptySignup"/>
@@ -12,6 +56,15 @@
           <include name="afterTest"/>
         </methods>
       </class> <!-- com.ict.drrscript.TestClassdrr -->
+      <class name="org.ict.scripts.TestClass">
+        <methods>
+          <include name="verifyNullValues"/>
+          <include name="setUP"/>
+          <include name="verifyInvalidInputs"/>
+          <include name="TearDown"/>
+          <include name="verifyCreateResumePage"/>
+        </methods>
+      </class> <!-- org.ict.scripts.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
